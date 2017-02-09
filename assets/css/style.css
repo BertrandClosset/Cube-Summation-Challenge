@@ -13,15 +13,18 @@ a {
   background-color: transparent;
   font-weight: normal;
 }
+p{
+  font-size: 1.6rem;
+}
 
 h1 {
   color: #444;
   background-color: transparent;
   border-bottom: 1px solid #D0D0D0;
-  font-size: 19px;
   font-weight: normal;
   margin: 0 0 14px 0;
   padding: 14px 15px 10px 15px;
+  text-align: center;
 }
 
 code {
@@ -55,4 +58,101 @@ p.footer {
 }
 textarea{
   display: block;
+  float: none;
+  margin: auto;
 }
+.col-centered{
+  margin: auto;
+  float: none;
+}
+form{
+  margin: auto;
+  float; none;
+  text-align: center;
+  background:#fff;
+    border-radius:2px;
+    padding:20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+form h1{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    color: #5C5C5C;
+    font-size:x-large;
+}
+form ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+form li{
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+#input-form li:last-child{
+    border:none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+form li > label{
+    display: block;
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+    font-size: 14px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus,
+{
+}
+form li > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+form textarea{
+    border: none;
+    height: 170px;
+}
+/*form input[type="submit"],
+form input[type="button"]{
+    background: #2471FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994FF;
+    border-radius: 3px;
+    color: #D2E2FF;
+}*/

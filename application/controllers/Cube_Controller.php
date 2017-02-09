@@ -76,31 +76,31 @@ class Cube_Controller extends CI_Controller {
           if($test[$i][0] == 'Q'){
             $test[$i] = list($function, $x1, $y1, $z1, $x2, $y2, $z2) = explode(" ", $test[$i], 7);
             if ($x1 > $x2 || $y1 > $y2 || $z1 > $z2){
-              $this->session->set_flashdata('message', 'The coordinates x1, y1 and z1 must be less than x2, y2 and z2');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinates x1, y1 and z1 must be less than x2, y2 and z2</div>');
               redirect("Cube_Controller/index");
             }
             if (($x1 > $n) || ($x1 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate x1 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate x1 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             if (($y1 > $n) || ($y1 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate y1 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate y1 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             if (($z1 > $n) || ($z1 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate z1 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate z1 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             if (($x2 > $n) || ($x2 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate x2 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate x2 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             if (($y2 > $n) || ($y2 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate y2 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate y2 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             if (($z2 > $n) || ($z2 < 1)){
-              $this->session->set_flashdata('message', 'The coordinate z2 must be between 1 and n');
+              $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Error!</strong>The coordinate z2 must be between 1 and n</div>');
               redirect("Cube_Controller/index");
             }
             $result = $this->cube->query($x1,$y1,$z1,$x2,$y2,$z2);
@@ -128,7 +128,7 @@ class Cube_Controller extends CI_Controller {
   {
     if ($num > 50 || $num < 1)
     {
-      $this->form_validation->set_message('nb_tests_check','The number of testcases must be between 1 and 50');
+      $this->form_validation->set_message('nb_tests_check','<div class="alert alert-danger"><strong>Error!</strong> The number of testcases must be between 1 and 50</div>');
       return FALSE;
     }
     else
@@ -148,7 +148,7 @@ class Cube_Controller extends CI_Controller {
     $array = $this->split_multidimensionnal_array($str);
     $nb_cases = count($array);
     if ($nb_cases != $this->input->post("nb-tests")){
-      $this->form_validation->set_message('number_cases_check', 'The quantity of testcases must be equal to the number entered before');
+      $this->form_validation->set_message('number_cases_check', '<div class="alert alert-danger"><strong>Error!</strong> The quantity of testcases must be equal to the number entered before</div>');
       return FALSE;
     }
     else{
@@ -171,15 +171,15 @@ class Cube_Controller extends CI_Controller {
       $first_line = $sub_array[0];
       list($n, $m) = explode(" ", $first_line, 2);
       if ($m != (count($sub_array)-1)){
-        $this->form_validation->set_message('number_instructions_check', 'The quantity of instructions must be equal to the number M');
+        $this->form_validation->set_message('number_instructions_check', '<div class="alert alert-danger"><strong>Error!</strong> The quantity of instructions must be equal to the number M</div>');
         return FALSE;
       }
       if ($m > 1000 || $m < 1){
-        $this->form_validation->set_message('number_instructions_check', 'The number of instructions must be between 1 and 1000');
+        $this->form_validation->set_message('number_instructions_check', '<div class="alert alert-danger"><strong>Error!</strong> The number of instructions must be between 1 and 1000</div>');
         return FALSE;
       }
       if ($n > 100 || $n < 1){
-        $this->form_validation->set_message('number_instructions_check', 'The size of the matrice must be between 1 and 100');
+        $this->form_validation->set_message('number_instructions_check', '<div class="alert alert-danger"><strong>Error!</strong> The size of the matrice must be between 1 and 100</div>');
         return FALSE;
       }
     }

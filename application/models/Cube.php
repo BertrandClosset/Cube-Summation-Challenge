@@ -18,7 +18,7 @@ public function creationMatrice($n){
 		{
 			for($z = 1; $z <= $n; $z++)
 			{
-				$this->matix[$x][$y][$z] = 0;
+				$this->matrix[$x][$y][$z] = 0;
 			}
 		}
 	}
@@ -26,7 +26,7 @@ public function creationMatrice($n){
 
 public function update($x,$y,$z,$value){
 
-	$this->matix[$x][$y][$z] = $value;
+	$this->matrix[$x][$y][$z] = $value;
 }
 
 public function query($x1,$y1,$z1,$x2,$y2,$z2){
