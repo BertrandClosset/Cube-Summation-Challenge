@@ -147,12 +147,9 @@ form textarea{
     border: none;
     height: 170px;
 }
-/*form input[type="submit"],
-form input[type="button"]{
-    background: #2471FF;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    border-bottom: 3px solid #5994FF;
-    border-radius: 3px;
-    color: #D2E2FF;
-}*/
+code{
+  display: block;
+  white-space: pre-wrap !important;
+  display: block;
+  line-height: 12px;
+}
